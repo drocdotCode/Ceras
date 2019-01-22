@@ -47,6 +47,7 @@ namespace NetworkExample
 					// Eventually when the client disconnects we'll just get an exception and end the thread...
 					while (true)
 					{
+						//cant get this working in latest 2.1.6 -- Ceras.Helpers?
 						var obj = await _receiveCeras.ReadFromStream(_netStream);
 						HandleMessage(obj);
 					}
